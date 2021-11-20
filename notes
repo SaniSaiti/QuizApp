@@ -1,1 +1,2 @@
 # damit nodejs über das Projekt bescheid weiss: npm init
+# neue datei mit name / endung .gitignore hinzugefügt, damit git einige sachen nicht liest.
