@@ -22,13 +22,35 @@
     </nav>
 
     <div class="container">
+
+
         <div class="card quiz-card">
             <img src="img/Group 5.png" class="card-img-top" alt="...">
-            <div class="card-body">
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="percent">0%</div>
+            </div>
+
+            <div class="card-body" id="endQuestion" style="display: none;">
+                <div class="end">
+                    COMPLETE <br> HTML QUIZ <br>
+                    <div class="score">
+                        <p class="score-p">YOUR SCORE</p>
+                        <p> <b id="right-Answer">1</b>/<b id="right-Answer1">5</b> </p>
+                    </div> <br>
+                    <button class="share">SHARE</button> <br>
+                    <button onclick="back()" class="replay">REPLAY</button>
+
+                </div>
+
+            </div>
+
+            <div class="card-body" id="questionBody">
+
                 <h5 class="card-title" id="questionText">Frage</h5>
 
+                <div id="disableddiv" class="">
 
-                <div id="disableddiv">
                     <!-- <div class="card quiz-answer mb-2" onclick="answer(0)">
                         <div class="card-body" id="answer_0">
                             Antwort
@@ -56,13 +78,15 @@
                         </div>
                     </div> -->
                 </div>
-                <b>1</b> von <b id="allQuestion">5</b> Fragen
+                <div>
+                    <span>
+                <b id="number">0</b> von <b id="allQuestion">5</b> Fragen
                 </span>
-                <button onclick="nextQuestion()" id="next-button" type="button" class="btn btn-warning" disabled>Nächte Frage</button>
-            </div>
+                    <button onclick="nextQuestion()" id="next-button" type="button" class="btn btn-warning" disabled>Nächte Frage</button>
+                </div>
 
+            </div>
         </div>
-    </div>
     </div>
 </body>
 
