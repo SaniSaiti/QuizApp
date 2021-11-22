@@ -6,48 +6,49 @@ let questions = [
         "answer_1": "Sani",
         "answer_2": "Tim Berners-Lee",
         "answer_3": "Rihana",
-        "answer_4": "Testen",
-        "rightanswer": 1
-
-    },
-
-    {
-        "question": "Wer hat Htm erfunden?",
-        "answer_0": "Bruce Lee",
-        "answer_1": "Sani",
-        "answer_2": "Tim Berners-Lee",
-        "answer_3": "Rihana",
+        "answer_4": "Bud Spencer",
         "rightanswer": 2
 
     },
 
     {
-        "question": "Wer hat Ht erfunden?",
-        "answer_0": "Bruce Lee",
-        "answer_1": "Sani",
-        "answer_2": "Tim Berners-Lee",
-        "answer_3": "Rihana",
+        "question": "Was bedeutet HTML ausgeschrieben?",
+        "answer_0": "Highend Text Manager Languane",
+        "answer_1": "Hypertext Main Logic",
+        "answer_2": "Hypertext Markup Language",
+        "answer_3": "Hausgemachte Tanzende Mäuse Lampe",
         "rightanswer": 2
 
     },
 
     {
-        "question": "Wer hat H erfunden?",
-        "answer_0": "Bruce Lee",
-        "answer_1": "Sani",
-        "answer_2": "Tim Berners-Lee",
-        "answer_3": "Rihana",
+        "question": "Was ist Shell?",
+        "answer_0": "Ein Betriebssystem",
+        "answer_1": "Eine Programmiersprache",
+        "answer_2": "Eine Eismarke",
+        "answer_3": "Ein Dienst um sich mit dem Computer zu verbinden",
+        "answer_4": "Ein Programm um Spoofing Attacken zu versenden",
         "rightanswer": 3
 
     },
 
     {
-        "question": "Wer hat halo erfunden?",
-        "answer_0": "Bruce Lee",
-        "answer_1": "Sani",
-        "answer_2": "Tim Berners-Lee",
-        "answer_3": "Rihana",
+        "question": "Wie wird eine Webseite designed?",
+        "answer_0": "Mit PHP",
+        "answer_1": "Mit Python",
+        "answer_2": "Mit Java",
+        "answer_3": "Mit CSS",
         "rightanswer": 3
+
+    },
+
+    {
+        "question": "Wofür steht CSS?",
+        "answer_0": "Cascading Style Sheets",
+        "answer_1": "Conduited System Server",
+        "answer_2": "Controled Server System",
+        "answer_3": "CaalSaaaSaala",
+        "rightanswer": 0
 
     },
 ];
@@ -86,6 +87,7 @@ function showQuestion() {
         })
 
         document.getElementById('disableddiv').classList.remove('disableddiv');
+        nextNumber();
     }
 
 }
@@ -111,15 +113,16 @@ function answer(selection) {
 
 
 function nextQuestion() {
-    nextNumber();
     currentQuenstion++
     document.getElementById('next-button').disabled = true;
     showQuestion();
+
 }
 
 function nextNumber() {
     document.getElementById('number').innerHTML = currentQuenstion + 1;
-    console.log(number)
+    document.getElementById('allQuestion').innerHTML = questions.length;
+
 }
 
 
@@ -129,6 +132,10 @@ function back() {
     document.getElementById('endQuestion').style.display = "none";
     document.getElementById('questionBody').style.display = "unset";
     render()
+
+
+
+
 }
 
 function calculat() {
@@ -167,10 +174,3 @@ function calculat() {
 //document.getElementById('answer_' + i).innerHTML = "";
 //document.getElementById('answer_' + i).innerHTML += ` ${question['answer_' + i]} `;
 //}
-
-/* function resetAnswerButton() {
-    let question = questions[currentQuenstion];
-    let idOfRightAnswer = `answer_${ question['rightanswer']}`
-
-    //document.getElementById(idOfRightAnswer).classList.remove('btn-success')
-} */
